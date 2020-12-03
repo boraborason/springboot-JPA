@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:tcp://localhost/~/jpashop;MVCC=TRUE #MVCC=TRUE는 여러개를 조금 더 빠른처리를 도와주는 옵션?
+    url: jdbc:h2:tcp://localhost/~/jpashop;
     username: sa
     password:
     driver-class-name: org.h2.Driver
