@@ -1,2 +1,2 @@
-# springboot-JAP
-springboot&amp;JAP 활용1
+# springboot-JPA
+springboot&amp;JPA 활용1
