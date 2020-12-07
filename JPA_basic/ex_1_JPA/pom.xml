@@ -8,18 +8,32 @@
     <artifactId>ex_1_JPA</artifactId>
     <version>1.0.0</version>
 
-    <dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies> <!--라이브러리 주입-->
         <!-- JPA 하이버네이트 -->
         <dependency>
             <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>5.3.10.Final</version>
+            <artifactId>hibernate-entitymanager</artifactId><!--jpa인터페이스를 다 가져옴-->
+            <version>5.3.10.Final</version> <!--spring과 맞는 버전으로 선택-->
         </dependency>
+
         <!-- H2 데이터베이스 -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>1.4.199</version>
+            <version>1.4.200</version> <!--내가 다운로드 받은 버전으로-->
         </dependency>
     </dependencies>
 </project>
