@@ -8,6 +8,7 @@
     <artifactId>ex_1_JPA</artifactId>
     <version>1.0.0</version>
 
+    <!--버전맞추기-->
     <build>
         <plugins>
             <plugin>
@@ -35,5 +36,13 @@
             <artifactId>h2</artifactId>
             <version>1.4.200</version> <!--내가 다운로드 받은 버전으로-->
         </dependency>
+
+        <!--자바 11부터는 해당 라이브러리가 기본 자바에서 빠져버려서 추가 해야함-->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+
     </dependencies>
 </project>

@@ -5,7 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-public class JpaMain {
+public class JpaMain2 {
 
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello"); //persistence.xml의 unit네임, 설정 정보조회(db연결됨)
@@ -16,23 +16,18 @@ public class JpaMain {
         tx.begin(); //tranjection 시작. 모든db변경은 이 안에서 이루어져야함
 
         try {
-            /*
+
             //비영속상태
             Member member = new Member();
-            member.setId(1L);
-            member.setName("보라");
+            member.setId(11L);
+            member.setName("송이");
 
             //영속상태(EntityManager를 통해 persistenceContext에서 관리가 되는 상태)
             em.persist(member); //member객체가 저장이 됨(아직 db저장x)
-            //영속해제
-            em.detach(member)
-             //삭제
-            em.remove(findMember)
-            */
 
-            //수정
-            Member findMember = em.find(Member.class, 1L);
-            findMember.setName("바봉");
+            Member findMember = em.find(Member.class, 11L);
+
+            System.out.println(findMember.getName());
 
             tx.commit(); //tranjection 커밋밋 (member객체가 db에 저장되는 시점)
         } catch (Exception e){
